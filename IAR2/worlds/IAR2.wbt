@@ -1,0 +1,43 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/mobsya/thymio/protos/Thymio2.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Parquetry.proto"
+
+WorldInfo {
+  basicTimeStep 10
+  contactProperties [
+    ContactProperties {
+      material2 "thymio body"
+      coulombFriction [
+        0.7
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.5773463674487266 0.577339600106844 0.5773648397176863 2.094417044474983
+  position -0.00014262238074148404 9.532324605094761e-05 2.643497305628249
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 1.5 1.5
+  floorTileSize 1.5 1.5
+  floorAppearance Parquetry {
+  }
+}
+Thymio2 {
+  hidden rotation_1 0.1491083562782494 0.1491084228804893 -0.9775138752539997 4.689648198187254
+  hidden rotation_2 -0.0073240765468393304 -0.0073241360933925855 0.9999463560277729 1.5708499135222445
+  translation 0.701042 -0.36353 -0.0100433
+  rotation 0.0042340405543742745 -0.0024105803156237397 0.9999881309311255 -3.1373753071795862
+  controllerArgs [
+    "port=2001"
+  ]
+  window "thymio2"
+}

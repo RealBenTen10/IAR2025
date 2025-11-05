@@ -1,0 +1,52 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/mobsya/thymio/protos/Thymio2.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/mobsya/thymio/protos/Thymio2Pen.proto"
+
+WorldInfo {
+  basicTimeStep 10
+  contactProperties [
+    ContactProperties {
+      material2 "thymio body"
+      coulombFriction [
+        0.7
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.5773463674487266 0.577339600106844 0.5773648397176863 2.094417044474983
+  position -0.00014262238074148404 9.532324605094761e-05 2.643497305628249
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 1.5 1.5
+  floorTileSize 1.5 1.5
+  floorAppearance Parquetry {
+  }
+}
+DEF Thymio Thymio2 {
+  hidden position_0_0 -2.266664312907016e-12
+  hidden position_0_1 8.348593523756117e-14
+  hidden rotation_1 0.1491083562814998 0.1491084228837397 -0.9775138752530079 4.689648198186241
+  hidden rotation_2 -0.007324076546423799 -0.007324136092977057 0.999946356027779 1.570849913522238
+  translation 0.031045011457320068 -0.36634383978768054 -2.006781941872593e-05
+  rotation 0.004752582937002596 9.976701206979407e-06 0.9999887063641729 -3.1373968712692317
+  name "Thymio"
+  controller "thymio_supervisor"
+  controllerArgs [
+    "port=2001"
+  ]
+  window "thymio2"
+  bodySlot [
+    Thymio2Pen {
+    }
+  ]
+}
