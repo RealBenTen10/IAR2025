@@ -24,7 +24,7 @@ PROTO CustomTrack [
               metalness 0
             }
             geometry DEF CustomTrack Mesh {
-              url "CustomTrack.stl"
+              url "CustomTrack.STL"
             }
           }
         ]
