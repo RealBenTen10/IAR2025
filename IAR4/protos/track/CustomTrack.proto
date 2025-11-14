@@ -1,0 +1,35 @@
+#VRML_SIM R2022b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the CustomTrack
+# Extracted from: /home/user/rackstation/home/Drive/myWork/stuffForOthers/Tanja/Thymio/track/track/protos/track/CustomTrack.urdf
+
+PROTO CustomTrack [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Transform {
+        translation -0.750000 0.325305 0.000160
+        rotation 1.000000 0.000000 0.000000 1.570796
+        scale 0.001000 0.001000 0.001000
+        children [
+          Shape {
+            appearance DEF white PBRAppearance {
+              roughness 1.000000
+              metalness 0
+            }
+            geometry DEF CustomTrack Mesh {
+              url "CustomTrack.stl"
+            }
+          }
+        ]
+      }
+    ]
+      name "line"
+  }
+}
